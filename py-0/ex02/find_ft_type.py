@@ -1,5 +1,5 @@
+
 def all_thing_is_obj(object: any) -> int:
-    
     match object:
         case list() | tuple() | set() | dict():
             type_name = type(object).__name__

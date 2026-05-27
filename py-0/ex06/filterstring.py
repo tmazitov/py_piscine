@@ -9,7 +9,7 @@ def is_number(s: str) -> bool:
         return True
     except ValueError:
         return False
-    
+
 
 def is_dirty_char(s: str) -> bool:
     """Return True if character is non-printable or invisible."""
@@ -22,12 +22,13 @@ def is_dirty_string(s: str) -> bool:
 
 
 def validate_args(argv: list[str]) -> bool:
-    """Validate that exactly two arguments are provided and are of correct types."""
+    """Validate that exactly two arguments
+    are provided and are of correct types."""
     if len(argv) != 3:
         raise AssertionError("the arguments are bad")
 
     if not is_number(argv[2]) or int(argv[2]) < 0:
-        raise AssertionError("the arguments are bad") 
+        raise AssertionError("the arguments are bad")
 
     if is_dirty_string(argv[1]):
         raise AssertionError("the arguments are bad")

@@ -1,5 +1,4 @@
 def NULL_not_found(object: any) -> int:
-
     match object:
         case None:
             print(f"Nothing: {object} {type(object)}")
