@@ -89,25 +89,25 @@ check "Hello World 123" \
 3 digits" \
 "$(python3 building.py "Hello World 123")"
 
-# Empty string arg — reads from stdin (newline from echo counts as a space)
+# Empty string arg — reads from stdin (newline stripped)
 check "empty arg reads from stdin" \
 "What is the text to count?
-The text contains 6 characters:
+The text contains 5 characters:
 1 upper letters
 4 lower letters
 0 punctuation marks
-1 spaces
+0 spaces
 0 digits" \
 "$(echo "Hello" | python3 building.py "")"
 
-# No args — reads from stdin (newline from echo counts as a space)
+# No args — reads from stdin (newline stripped)
 check "no args reads from stdin" \
 "What is the text to count?
-The text contains 13 characters:
+The text contains 12 characters:
 2 upper letters
 8 lower letters
 1 punctuation marks
-2 spaces
+1 spaces
 0 digits" \
 "$(echo "Hello World!" | python3 building.py)"
 
