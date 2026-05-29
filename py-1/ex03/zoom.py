@@ -88,7 +88,7 @@ def main():
 
     print(animal_image)
 
-    sliced_image = slice_image(animal_image, 0)
+    sliced_image = slice_image(animal_image)
     print(sliced_image)
 
     draw_image(sliced_image)
