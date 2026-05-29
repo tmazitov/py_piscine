@@ -1,6 +1,7 @@
 
 
 def is_number(value: any) -> bool:
+    """Checks if the value is number"""
     return isinstance(value, (int, float)) and not isinstance(value, bool)
 
 

@@ -1,16 +1,19 @@
 
 
 def is_number(value: any) -> bool:
+    """Checks if the value is number"""
     return isinstance(value, (int, float)) and not isinstance(value, bool)
 
 
 def is_nan(value: any) -> bool:
+    """Checks if the value is NaN"""
     if isinstance(value, float):
         return value != value  # NaN is not equal to itself
     return False
 
 
 def validate_list(values: list[int | float]) -> bool:
+    """Validates the list of int|float"""
     if not isinstance(values, list):
         return False
     for value in values:

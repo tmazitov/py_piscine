@@ -3,6 +3,7 @@ from PIL import Image
 
 
 def ft_load(path: str) -> np.ndarray:
+    """Load image as an array of pixels and prints its shape."""
     try:
         with Image.open(path) as img:
             pixels = len(img.getbands())

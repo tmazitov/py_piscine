@@ -12,13 +12,11 @@ def is_number(value: any) -> bool:
     return isinstance(value, (int)) and not isinstance(value, bool)
 
 
-def slice_image(image: np.ndarray, begin: int) -> np.ndarray:
+def slice_image(image: np.ndarray) -> np.ndarray:
     """Slice a 400x400 grayscale region from the center of the image."""
     try:
         if not isinstance(image, np.ndarray):
             raise TypeError("image must be a numpy array")
-        if not is_number(begin):
-            raise TypeError("begin must be an integer")
 
         if image.ndim != 3:
             raise ValueError("image must be a 3D array")
